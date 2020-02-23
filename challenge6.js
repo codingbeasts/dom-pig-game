@@ -78,8 +78,7 @@ function holdDice(){
       document.querySelector(".player-"+activePlayer+"-panel").classList.remove("active");
       document.querySelector(".wining-score").value="";
       document.querySelector(".wining-score").disabled=true;
-      rollingDice1.style.display="none";
-      rollingDice2.style.display="none";
+      removeDices();
       //end game
       gamePlaying=false;
     }else{
@@ -109,8 +108,7 @@ function init(){
   document.getElementById("score-1").textContent = "0";
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
-  rollingDice1.style.display = "none";
-  rollingDice2.style.display = "none";
+  removeDices();
   document.getElementById("name-0").textContent = "Player 1";
   document.getElementById("name-1").textContent = "Player 2";
   document.querySelector(".player-0-panel").classList.remove("winner");
@@ -122,6 +120,11 @@ function init(){
   document.querySelector(".wining-score").disabled=false;
   lastdice1=0;
   lastdice2=0;
+}
+
+function removeDices(){
+  rollingDice1.style.display = "none";
+  rollingDice2.style.display = "none";
 }
 
 //calling function
