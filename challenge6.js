@@ -78,6 +78,8 @@ function holdDice(){
       document.querySelector(".player-"+activePlayer+"-panel").classList.remove("active");
       document.querySelector(".wining-score").value="";
       document.querySelector(".wining-score").disabled=true;
+      rollingDice1.style.display="none";
+      rollingDice2.style.display="none";
       //end game
       gamePlaying=false;
     }else{
